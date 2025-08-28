@@ -26,3 +26,14 @@ build:
 
 copy-to-server:
 	scp service_linux root@178.72.128.137:
+
+docker-build-and-push:
+	docker buildx build --no-cache --platform linux/amd64 -t cr.selcloud.ru/buyan25/test-server:v0.0.1 .
+	docker login -u token -p CRgAAAAAuB4eztu2VCIwteYihkl5Ec3OYeWvXb60 cr.selcloud.ru/buyan25
+	docker push cr.selcloud.ru/buyan25/test-server:v0.0.1
+
+
+# docker-build-and-push:
+# 	docker buildx build --no-cache --platform linux/amd64 -t <REGESTRY>/test-server:v0.0.1 .
+# 	docker login -u <USERNAME> -p <PASSWORD> <REGESTRY>
+# 	docker push <REGESTRY>/test-server:v0.0.1
