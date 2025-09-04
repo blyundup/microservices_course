@@ -1,10 +1,10 @@
 package env
 
 import (
-    "errors"
-    "os"
+	"errors"
+	"os"
 
-    "github.com/blyundup/microservices_course/week_3/internal/config"
+	"github.com/blyundup/microservices_course/week_1/grpc/internal/config"
 )
 
 var _ config.PGConfig = (*pgConfig)(nil)

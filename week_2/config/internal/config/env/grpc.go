@@ -1,11 +1,11 @@
 package env
 
 import (
-    "errors"
-    "net"
-    "os"
+	"errors"
+	"net"
+	"os"
 
-    "github.com/blyundup/microservices_course/week_3/internal/config"
+	"github.com/blyundup/microservices_course/week_1/grpc/internal/config"
 )
 
 var _ config.GRPCConfig = (*grpcConfig)(nil)
